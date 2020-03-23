@@ -1,0 +1,52 @@
+---
+title: "Settle down a personal website"
+subtitle: "with blogdown in R"  
+author: "Annie Lyu & Anabelle Laurent"
+date: '`r Sys.Date()`'
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: [rladies, rladies-fonts]
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+# Why personal website?
+
+- Be professional `r emo::ji("necktie")`
+
+  + [Some advice on managing your online presence - Hadley Wickham](https://twitter.com/hadleywickham/status/1189971594778681344)
+
+--
+
+- Autobiography `r emo::ji("book")`
+
+  + [我网故我在](https://yihui.org/cn/2016/12/student-project/)
+
+--
+
+- Learning and Sharing `r emo::ji("speaker")`
+
+  + [The unreasonable effectiveness of public work - David Robinson](https://resources.rstudio.com/rstudio-conf-2019/the-unreasonable-effectiveness-of-public-work)
+  
+  + [Becoming an R blogger](http://www.rebeccabarter.com/blog/2020-02-03_blogger/)
+
+--
+
+- Have fun programming and blogging! `r emo::ji("grin")`
+
+  + [Twitter Threads vs Blogging - Yihui Xie](https://yihui.org/en/2017/08/twitter-threads-vs-blogging/)
+
+---
+# Why blogdown?
+
+[Consider Netlify instead of GitHub Pages for Your Static Websites](https://yihui.org/en/2017/06/netlify-instead-of-github-pages/)
+
+---
+# How to get it done?
+
