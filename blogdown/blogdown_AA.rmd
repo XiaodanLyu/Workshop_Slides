@@ -2,7 +2,7 @@
 title: "Settle down a personal website"
 subtitle: "with blogdown in R"  
 author: "Annie Lyu & Anabelle Laurent"
-date: '`r Sys.Date()`'
+date: '<br>Graphics Group @ ISU <br>`r Sys.Date()`'
 output:
   xaringan::moon_reader:
     lib_dir: libs
@@ -11,12 +11,14 @@ output:
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
+      beforeInit: "https://platform.twitter.com/widgets.js"
+      # ratio: '16:9'
 ---
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
 ```
 
-# Why personal website?
+# Why a personal website?
 
 - Be professional `r emo::ji("necktie")`
 
@@ -43,10 +45,76 @@ options(htmltools.dir.version = FALSE)
   + [Twitter Threads vs Blogging - Yihui Xie](https://yihui.org/en/2017/08/twitter-threads-vs-blogging/)
 
 ---
-# Why blogdown?
 
-[Consider Netlify instead of GitHub Pages for Your Static Websites](https://yihui.org/en/2017/06/netlify-instead-of-github-pages/)
+<body>
+<style type="text/css">
+body, html
+{
+margin: 0; padding: 0; height: 100%; overflow: hidden;
+}
+#content
+{
+position:absolute; left: 0; right: 0; bottom: 0; top: 0px; 
+}
+</style>
+<div id="content">
+<iframe width="100%" height="100%" frameborder="0" src="https://annielyu.com/2020/01/12/blogdown-website/"/>
+</div>
+</body>
+
+---
+
+<body>
+<style type="text/css">
+body, html
+{
+margin: 0; padding: 0; height: 100%; overflow: hidden;
+}
+#content
+{
+position:absolute; left: 0; right: 0; bottom: 0; top: 0px; 
+}
+</style>
+<div id="content">
+<iframe width="100%" height="100%" frameborder="0" src="http://anabellelaurent.com/"/>
+</div>
+</body>
 
 ---
 # How to get it done?
+
+1. file structures of blogdown websites
+
+  + `install.packages("blogdown")`
+
+--
+
+1. custom domain name
+
+  + Google Domains (.com, .org, .me) for a cost of $12 per year
+  
+  + Google Analytics (monitor website traffic for free)
+  
+--
+
+1. deploy with GitHub and Netlify
+
+  + tell Netlify to auto build your website through your GitHub repo
+
+---
+## RStudio and Website using blogdown
+
+New Project -> New Directory -> Website using blogdown 
+
+![](images/start.png)
+
+---
+## RStudio and Website using blogdown
+
+New Project -> New Directory -> Website using blogdown 
+
+![](images/start_annote.png)
+
+---
+# Caveats
 

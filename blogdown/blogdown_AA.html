@@ -4,7 +4,6 @@
     <title>Settle down a personal website</title>
     <meta charset="utf-8" />
     <meta name="author" content="Annie Lyu &amp; Anabelle Laurent" />
-    <meta name="date" content="2020-03-22" />
     <link href="libs/remark-css/rladies.css" rel="stylesheet" />
     <link href="libs/remark-css/rladies-fonts.css" rel="stylesheet" />
   </head>
@@ -15,13 +14,13 @@ class: center, middle, inverse, title-slide
 # Settle down a personal website
 ## with blogdown in R
 ### Annie Lyu &amp; Anabelle Laurent
-### 2020-03-22
+### <br>Graphics Group @ ISU <br>2020-03-24
 
 ---
 
 
 
-# Why personal website?
+# Why a personal website?
 
 - Be professional 👔
 
@@ -48,15 +47,82 @@ class: center, middle, inverse, title-slide
   + [Twitter Threads vs Blogging - Yihui Xie](https://yihui.org/en/2017/08/twitter-threads-vs-blogging/)
 
 ---
-# Why blogdown?
 
-[Consider Netlify instead of GitHub Pages for Your Static Websites](https://yihui.org/en/2017/06/netlify-instead-of-github-pages/)
+&lt;body&gt;
+&lt;style type="text/css"&gt;
+body, html
+{
+margin: 0; padding: 0; height: 100%; overflow: hidden;
+}
+#content
+{
+position:absolute; left: 0; right: 0; bottom: 0; top: 0px; 
+}
+&lt;/style&gt;
+&lt;div id="content"&gt;
+&lt;iframe width="100%" height="100%" frameborder="0" src="https://annielyu.com/2020/01/12/blogdown-website/"/&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+
+---
+
+&lt;body&gt;
+&lt;style type="text/css"&gt;
+body, html
+{
+margin: 0; padding: 0; height: 100%; overflow: hidden;
+}
+#content
+{
+position:absolute; left: 0; right: 0; bottom: 0; top: 0px; 
+}
+&lt;/style&gt;
+&lt;div id="content"&gt;
+&lt;iframe width="100%" height="100%" frameborder="0" src="http://anabellelaurent.com/"/&gt;
+&lt;/div&gt;
+&lt;/body&gt;
 
 ---
 # How to get it done?
+
+1. file structures of blogdown websites
+
+  + `install.packages("blogdown")`
+
+--
+
+1. custom domain name
+
+  + Google Domains (.com, .org, .me) for a cost of $12 per year
+  
+  + Google Analytics (monitor website traffic for free)
+  
+--
+
+1. deploy with GitHub and Netlify
+
+  + tell Netlify to auto build your website through your GitHub repo
+
+---
+## RStudio and Website using blogdown
+
+New Project -&gt; New Directory -&gt; Website using blogdown 
+
+![](images/start.png)
+
+---
+## RStudio and Website using blogdown
+
+New Project -&gt; New Directory -&gt; Website using blogdown 
+
+![](images/start_annote.png)
+
+---
+# Caveats
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="https://platform.twitter.com/widgets.js"></script>
 <script>var slideshow = remark.create({
 "highlightStyle": "github",
 "highlightLines": true,
