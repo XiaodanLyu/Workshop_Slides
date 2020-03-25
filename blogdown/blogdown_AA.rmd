@@ -116,5 +116,44 @@ New Project -> New Directory -> Website using blogdown
 ![](images/start_annote.png)
 
 ---
+background-image: url(images/serve_site.png)
+background-size: 100%
+background-position: 50% 50%
+
+---
+class: inverse
+
+## Your Turn
+
+- Create a new website using the RStudio dialog to set it up in a new project.
+
+  + pick a [hugo theme](https://themes.gohugo.io/) you like (we'll use the hugo-academic as an example)
+
+- Live preview a website locally (Addins -> Serve Site).
+
+---
+## File structure
+
+- configuration
+
+  + config.toml
+
+  + config/_default/*.toml => languages, menus, params
+
+- content
+
+  + <mark>home/*.md</mark>
+
+  + authors/admin
+  
+  + post, talk, project, publication
+
+- static
+
+  + img, files, etc. 
+
+- **DO NOT TOUCH**: public, resources, themes
+
+---
 # Caveats
 
