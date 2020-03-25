@@ -154,6 +154,14 @@ class: inverse
 
 - **DO NOT TOUCH**: public, resources, themes
 
+
+---
+## Modify the content folder 
+
+- home
+
+![](images/content_folder.png)
+
 ---
 # Caveats
 
