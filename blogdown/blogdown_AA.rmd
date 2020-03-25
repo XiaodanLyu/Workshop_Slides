@@ -160,6 +160,8 @@ class: inverse
 
 - home
 
+![](images/content_folder.png)
+
 ---
 # Caveats
 
