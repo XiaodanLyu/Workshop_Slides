@@ -160,8 +160,7 @@ class: inverse
 
 - home
 
-![](images/content_folder.png)
-
+![](/blogdown/blogdown_AA_files/content_folder.png)
 ---
 # Caveats
 
