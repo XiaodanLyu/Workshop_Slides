@@ -156,11 +156,9 @@ class: inverse
 
 
 ---
-## Modify the content folder 
+## Modify content/home 
 
-- home
-
-![](images/content_folder.png)
+<center><img src="images/content_folder.png" style="width: 90%" /></center>
 
 ---
 # Caveats
