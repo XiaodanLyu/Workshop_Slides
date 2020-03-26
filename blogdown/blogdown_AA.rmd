@@ -161,5 +161,14 @@ class: inverse
 <center><img src="images/content_folder.png" style="width: 90%" /></center>
 
 ---
+## Modify content/home 
+
+- keep or discard what you want by using activate = true or false 
+
+  + see line 5
+
+<center><img src="images/activate_truefalse.png" style="width: 90%" /></center>
+
+---
 # Caveats
 
