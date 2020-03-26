@@ -163,11 +163,38 @@ class: inverse
 ---
 ## Modify content/home 
 
-- keep or discard what you want by using activate = true or false 
+- keep sections by setting activate = true 
+
+- discard unwanted sections by setting activate = false 
 
   + see line 5
 
 <center><img src="images/activate_truefalse.png" style="width: 90%" /></center>
+
+---
+## Modify content/authors/admin 
+
+- edit the file authors/admin/_index.md to personnalize the top of your home page
+
+- place your profil picture in the folder authors/admin (use jpg format) 
+
+<center><img src="images/authors_admin.png" style="width: 90%" /></center>
+
+---
+## Modify content/authors/admin 
+
+- edit the file authors/admin/_index.md to personnalize the top of your home page
+
+<center><img src="images/authors_admin_index.png" style="width: 80%" /></center>
+
+---
+## Modify content/authors/admin 
+
+- use [Font Awesome](https://fontawesome.com/icons?d=gallery) website to customize your social medias
+
+<center><img src="images/fontawesome.png" style="width: 80%" /></center>
+
+
 
 ---
 # Caveats
