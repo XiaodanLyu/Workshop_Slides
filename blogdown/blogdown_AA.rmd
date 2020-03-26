@@ -163,11 +163,11 @@ class: inverse
 ---
 ## Modify content/home 
 
-- keep sections by setting activate = true 
-
-- discard unwanted sections by setting activate = false 
+- keep sections or discard unwanted ones by setting `activate=true` or `activate=false`
 
   + see line 5
+
+- adjust the order of each section by setting the value of `weight` 
 
 <center><img src="images/activate_truefalse.png" style="width: 90%" /></center>
 
@@ -193,7 +193,6 @@ class: inverse
 - use [Font Awesome](https://fontawesome.com/icons?d=gallery) website to customize your social medias
 
 <center><img src="images/fontawesome.png" style="width: 80%" /></center>
-
 
 
 ---
