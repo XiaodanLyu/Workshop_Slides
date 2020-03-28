@@ -28,7 +28,7 @@ options(htmltools.dir.version = FALSE)
 
 - Autobiography `r emo::ji("book")`
 
-  + [我网故我在](https://yihui.org/cn/2016/12/student-project/)
+  + [我网故我在 - Yihui Xie](https://yihui.org/cn/2016/12/student-project/)
 
 --
 
@@ -36,7 +36,7 @@ options(htmltools.dir.version = FALSE)
 
   + [The unreasonable effectiveness of public work - David Robinson](https://resources.rstudio.com/rstudio-conf-2019/the-unreasonable-effectiveness-of-public-work)
   
-  + [Becoming an R blogger](http://www.rebeccabarter.com/blog/2020-02-03_blogger/)
+  + [Becoming an R blogger - Rebecca Barter](http://www.rebeccabarter.com/blog/2020-02-03_blogger/)
 
 --
 
@@ -81,15 +81,22 @@ position:absolute; left: 0; right: 0; bottom: 0; top: 0px;
 </body>
 
 ---
+class: inverse
+
+background-image: url(https://media.giphy.com/media/mohhXPUdhVVoA/giphy.gif)
+background-size: 100%
+background-position: 50% 50%
+
+---
 # How to get it done?
 
-1. file structures of blogdown websites
+1. customize your content by modifying a template website -- <span style="color:blue">lots of work</span> `r emo::ji("sweat_smile")`
 
   + `install.packages("blogdown")`
 
 --
 
-1. custom domain name
+1. custom domain name -- <span style="color:blue">straightforward</span> `r emo::ji("smile")`
 
   + Google Domains (.com, .org, .me) for a cost of $12 per year
   
@@ -97,9 +104,11 @@ position:absolute; left: 0; right: 0; bottom: 0; top: 0px;
   
 --
 
-1. deploy with GitHub and Netlify
+1. publish with GitHub and Netlify -- <span style="color:blue">somewhat tricky</span> `r emo::ji("persevere")`
 
   + tell Netlify to auto build your website through your GitHub repo
+  
+  + configure custom domain DNS
 
 ---
 ## RStudio and Website using blogdown
@@ -134,98 +143,116 @@ class: inverse
 ---
 ## File structure
 
-- configuration
+- configuration: <span style="color:blue">a few site settings to go through</span>
 
   + config.toml
 
-  + config/_default/*.toml => languages, menus, params
+  + config/_default/*.toml $\Rightarrow$ languages, menus, params
 
-- content
+--
 
-  + <mark>home/*.md</mark>
+- content: <span style="color:blue">mostly markdown files</span>
 
-  + authors/admin
+  + home/*.md -- homepage layout
+
+  + authors/admin -- biography
   
-  + post, talk, project, publication
+  + post, talk, project, publication -- achievements `r emo::ji("100")`  
 
-- static
+--
 
-  + img, files, etc. 
+- static: <span style="color:blue">self imported files</span>
 
-- **DO NOT TOUCH**: public, resources, themes
+  + images, slides, resume, etc. 
 
+--
+
+- <mark>**DO NOT TOUCH**</mark>: public, resources, themes
 
 ---
-## Modify content/home 
+## Homepage Layout (content/home)
 
 <center><img src="images/content_folder.png" style="width: 90%" /></center>
 
 ---
-## Modify content/home 
+## Homepage Layout (content/home) 
 
-- keep sections or discard unwanted ones by setting `activate=true` or `activate=false`
+- `active = true`: keep section; `active = false`: discard section (line 5)
 
-  + see line 5
-
-- adjust the order of each section by setting the value of `weight` 
+- `weight`: section order (small weight shows first, line 6)
 
 <center><img src="images/activate_truefalse.png" style="width: 90%" /></center>
 
 ---
-## Modify content/authors/admin 
+## Biography (content/authors/admin)
 
-- edit the file authors/admin/_index.md to personnalize the top of your home page
+- edit authors/**admin**/_index.md to introduce yourself
 
-- place your profil picture in the folder authors/admin (use jpg format) 
+- replace authors/admin/avatar.jpg with your profile picture
 
 <center><img src="images/authors_admin.png" style="width: 90%" /></center>
 
 ---
-## Modify content/authors/admin 
-
-- edit the file authors/admin/_index.md to personnalize the top of your home page
+## Biography (content/authors/admin/_index.md) 
 
 <center><img src="images/authors_admin_index.png" style="width: 80%" /></center>
 
 ---
-## Modify content/authors/admin 
-
-- use [Font Awesome](https://fontawesome.com/icons?d=gallery) website to customize your social medias
+## Resources - fontawesome icons
 
 <center><img src="images/fontawesome.png" style="width: 90%" /></center>
 
 ---
-## Create a new R Markdown post
+class: inverse
 
-- Option 1: use the New Post addin
+## Your turn
+
+- Clean up the sections on the homepage (optional)
+
+- Fill in your information (at least name, organization and role)
+
+---
+## Create a new R Markdown post (content/post)
+
+- use the **New Post** Addin (or run `blogdown::new_post(ext = '.Rmd')`)
 
 <center><img src="images/newpost.png" style="width: 90%" /></center>
 
 ---
-## Create a new R Markdown post
+## Create a new R Markdown post (content/post)
 
-- Option 1: use the New Post addin
+<mark>**Do not knit**</mark> your post, instead
 
-- Option 2: use the console `blogdown::new_post(ext = '.Rmd')`
+  + use the **Serve Site** Addin to preview your post, or
+  
+  + refresh preview
+  
+- In YAML header,
 
-- **Do not knit** after editing your post, only use the addin Serve Site to see how your post looks
+  + `draft:TRUE` $\Rightarrow$ preview an R markdown post
+
+  + `draft:FALSE` $\Rightarrow$ ready to deploy a post
 
 ---
-## Create a new R Markdown post
+## Import files (static)
 
-- use `draft: TRUE` in the YAML to be the only one able to preview a R markdown post. 
-
-- when your post will be ready to be deployed, set up `draft: FALSE`
-
----
-## Add an image to a R Markdown post
-
-For image not created from your R Markdown, you should
+For image not created from your R Markdown file, you should
  
- + add the image to `static/img` folder
- + refere your image using `![my-image](/img/my-image.png)`
+ + add image to the `static/img` folder
  
+ + insert your image using `![my-image](/img/xx.png)`
+
+--
+
+Any files in the `static` folder can be referred using similar relative path!
  
 ---
-# Caveats
+class: inverse
+
+## Your Turn
+
+- Create a "hello world" post
+
+---
+## Deploy with Netlify and GitHub
 

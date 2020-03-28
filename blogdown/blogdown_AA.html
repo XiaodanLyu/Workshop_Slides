@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="" xml:lang="">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
   <head>
     <title>Settle down a personal website</title>
     <meta charset="utf-8" />
@@ -14,7 +14,7 @@ class: center, middle, inverse, title-slide
 # Settle down a personal website
 ## with blogdown in R
 ### Annie Lyu &amp; Anabelle Laurent
-### <br>Graphics Group @ ISU <br>2020-03-26
+### <br>Graphics Group @ ISU <br>2020-03-28
 
 ---
 
@@ -30,7 +30,7 @@ class: center, middle, inverse, title-slide
 
 - Autobiography 📖
 
-  + [我网故我在](https://yihui.org/cn/2016/12/student-project/)
+  + [我网故我在 - Yihui Xie](https://yihui.org/cn/2016/12/student-project/)
 
 --
 
@@ -38,7 +38,7 @@ class: center, middle, inverse, title-slide
 
   + [The unreasonable effectiveness of public work - David Robinson](https://resources.rstudio.com/rstudio-conf-2019/the-unreasonable-effectiveness-of-public-work)
   
-  + [Becoming an R blogger](http://www.rebeccabarter.com/blog/2020-02-03_blogger/)
+  + [Becoming an R blogger - Rebecca Barter](http://www.rebeccabarter.com/blog/2020-02-03_blogger/)
 
 --
 
@@ -83,15 +83,22 @@ position:absolute; left: 0; right: 0; bottom: 0; top: 0px;
 &lt;/body&gt;
 
 ---
+class: inverse
+
+background-image: url(https://media.giphy.com/media/mohhXPUdhVVoA/giphy.gif)
+background-size: 100%
+background-position: 50% 50%
+
+---
 # How to get it done?
 
-1. file structures of blogdown websites
+1. customize your content by modifying a template website -- &lt;span style="color:blue"&gt;lots of work&lt;/span&gt; 😅
 
   + `install.packages("blogdown")`
 
 --
 
-1. custom domain name
+1. custom domain name -- &lt;span style="color:blue"&gt;straightforward&lt;/span&gt; 😄
 
   + Google Domains (.com, .org, .me) for a cost of $12 per year
   
@@ -99,9 +106,11 @@ position:absolute; left: 0; right: 0; bottom: 0; top: 0px;
   
 --
 
-1. deploy with GitHub and Netlify
+1. publish with GitHub and Netlify -- &lt;span style="color:blue"&gt;somewhat tricky&lt;/span&gt; 😣
 
   + tell Netlify to auto build your website through your GitHub repo
+  
+  + configure custom domain DNS
 
 ---
 ## RStudio and Website using blogdown
@@ -136,100 +145,115 @@ class: inverse
 ---
 ## File structure
 
-- configuration
+- configuration: &lt;span style="color:blue"&gt;a few site settings to go through&lt;/span&gt;
 
   + config.toml
 
-  + config/_default/*.toml =&gt; languages, menus, params
+  + config/_default/*.toml `\(\Rightarrow\)` languages, menus, params
 
-- content
+--
 
-  + &lt;mark&gt;home/*.md&lt;/mark&gt;
+- content: &lt;span style="color:blue"&gt;mostly markdown files&lt;/span&gt;
 
-  + authors/admin
+  + home/*.md -- homepage layout
+
+  + authors/admin -- biography
   
-  + post, talk, project, publication
+  + post, talk, project, publication -- achievements 💯  
 
-- static
+--
 
-  + img, files, etc. 
+- static: &lt;span style="color:blue"&gt;self imported files&lt;/span&gt;
 
-- **DO NOT TOUCH**: public, resources, themes
+  + images, slides, resume, etc. 
 
+--
+
+- &lt;mark&gt;**DO NOT TOUCH**&lt;/mark&gt;: public, resources, themes
 
 ---
-## Modify content/home 
+## Homepage Layout (content/home)
 
 &lt;center&gt;&lt;img src="images/content_folder.png" style="width: 90%" /&gt;&lt;/center&gt;
 
 ---
-## Modify content/home 
+## Homepage Layout (content/home) 
 
-- keep sections or discard unwanted ones by setting `activate=true` or `activate=false`
+- `active = true`: keep section; `active = false`: discard section (line 5)
 
-  + see line 5
-
-- adjust the order of each section by setting the value of `weight` 
+- `weight`: section order (small weight shows first, line 6)
 
 &lt;center&gt;&lt;img src="images/activate_truefalse.png" style="width: 90%" /&gt;&lt;/center&gt;
 
 ---
-## Modify content/authors/admin 
+## Biography (content/authors/admin)
 
-- edit the file authors/admin/_index.md to personnalize the top of your home page
+- edit authors/**admin**/_index.md to introduce yourself
 
-- place your profil picture in the folder authors/admin (use jpg format) 
+- replace authors/admin/avatar.jpg with your profile picture
 
 &lt;center&gt;&lt;img src="images/authors_admin.png" style="width: 90%" /&gt;&lt;/center&gt;
 
 ---
-## Modify content/authors/admin 
-
-- edit the file authors/admin/_index.md to personnalize the top of your home page
+## Biography (content/authors/admin/_index.md) 
 
 &lt;center&gt;&lt;img src="images/authors_admin_index.png" style="width: 80%" /&gt;&lt;/center&gt;
 
 ---
-## Modify content/authors/admin 
-
-- use [Font Awesome](https://fontawesome.com/icons?d=gallery) website to customize your social medias
+## Resources - fontawesome icons
 
 &lt;center&gt;&lt;img src="images/fontawesome.png" style="width: 90%" /&gt;&lt;/center&gt;
 
 ---
-## Create a new R Markdown post
+class: inverse
 
-- Option 1: use the New Post addin
+## Your turn
+
+- Clean up the sections on the homepage (optional)
+
+- Fill in your information (at least name, organization and role)
+
+---
+## Create a new R Markdown post (content/post)
+
+- use the **New Post** Addin (or run `blogdown::new_post(ext = '.Rmd')`)
 
 &lt;center&gt;&lt;img src="images/newpost.png" style="width: 90%" /&gt;&lt;/center&gt;
 
 ---
-## Create a new R Markdown post
+## Create a new R Markdown post (content/post)
 
-- Option 1: use the New Post addin
+&lt;mark&gt;**Do not knit**&lt;/mark&gt; your post, instead
 
-- Option 2: use the console `blogdown::new_post(ext = '.Rmd')`
+  + use the **Serve Site** Addin to preview your post, or
+  
+  + refresh preview
+  
+- In YAML header,
 
-- **Do not knit** after editing your post, only use the addin Serve Site to see how your post looks
+  + `draft:TRUE` `\(\Rightarrow\)` preview an R markdown post
+
+  + `draft:FALSE` `\(\Rightarrow\)` ready to deploy a post
 
 ---
-## Create a new R Markdown post
+## Import files (static)
 
-- use `draft: TRUE` in the YAML to be the only one able to preview a R markdown post. 
-
-- when your post will be ready to be deployed, set up `draft: FALSE`
-
----
-## Add an image to a R Markdown post
-
-For image not created from your R Markdown, you should
+For image not created from your R Markdown file, you should
  
  + add the image to `static/img` folder
- + refere your image using `![my-image](/img/my-image.png)`
  
+ + insert your image using `![my-image](/img/xx.png)`
+
+--
+
+Any files in the `static` folder can be referred using similar relative path!
  
 ---
-# Caveats
+class: inverse
+
+## Your Turn
+
+- Create a "hello world" post
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
