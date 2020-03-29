@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="" xml:lang="">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
   <head>
     <title>Settle down a personal website</title>
     <meta charset="utf-8" />
     <meta name="author" content="Annie Lyu &amp; Anabelle Laurent" />
     <link href="libs/remark-css/rladies.css" rel="stylesheet" />
     <link href="libs/remark-css/rladies-fonts.css" rel="stylesheet" />
+    <link href="libs/font-awesome/css/fontawesome-all.min.css" rel="stylesheet" />
   </head>
   <body>
     <textarea id="source">
@@ -138,7 +139,7 @@ class: inverse
 
 - Create a new website using the RStudio dialog to set it up in a new project.
 
-  + pick a [hugo theme](https://themes.gohugo.io/) you like (we'll use the hugo-academic as an example)
+  + pick a [hugo theme](https://themes.gohugo.io/) you like (we'll use hugo-academic as an example)
 
 - Live preview a website locally (Addins -&gt; Serve Site).
 
@@ -157,9 +158,9 @@ class: inverse
 
   + home/*.md -- homepage layout
 
-  + authors/admin -- biography
+  + authors/admin -- your biography
   
-  + post, talk, project, publication -- achievements 💯  
+  + post, talk, project, publication -- your achievements 💯  
 
 --
 
@@ -200,9 +201,18 @@ class: inverse
 &lt;center&gt;&lt;img src="images/authors_admin_index.png" style="width: 80%" /&gt;&lt;/center&gt;
 
 ---
-## Resources - fontawesome icons
+## Resources - icons <i class="fab  fa-r-project "></i>
 
-&lt;center&gt;&lt;img src="images/fontawesome.png" style="width: 90%" /&gt;&lt;/center&gt;
+- [Fontawesome](https://fontawesome.com/icons?d=gallery) and `"r icon::fa()"`
+
+![](images/icons.png)
+
+---
+## Resources - Emoji 😎
+
+- [Cheat sheet](https://www.webfx.com/tools/emoji-cheat-sheet/) and `"r emo::ji()"`
+
+![](images/emoji.png)
 
 ---
 class: inverse
@@ -267,14 +277,10 @@ class: inverse
 
 Per publication folder, you need
 
-  + a markdown (.md) document 
-  
-  + a picture (png format)
-  
-  + and a citation 
+  + a markdown file, a picture (.png format), and a citation 
   
 ---
-## Add publication citation
+## Add a publication citation
 
 - use **bibtex** format. Open cite.bib on **BibDesk**
 

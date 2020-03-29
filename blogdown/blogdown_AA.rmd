@@ -136,7 +136,7 @@ class: inverse
 
 - Create a new website using the RStudio dialog to set it up in a new project.
 
-  + pick a [hugo theme](https://themes.gohugo.io/) you like (we'll use the hugo-academic as an example)
+  + pick a [hugo theme](https://themes.gohugo.io/) you like (we'll use hugo-academic as an example)
 
 - Live preview a website locally (Addins -> Serve Site).
 
@@ -155,9 +155,9 @@ class: inverse
 
   + home/*.md -- homepage layout
 
-  + authors/admin -- biography
+  + authors/admin -- your biography
   
-  + post, talk, project, publication -- achievements `r emo::ji("100")`  
+  + post, talk, project, publication -- your achievements `r emo::ji("100")`  
 
 --
 
@@ -198,9 +198,18 @@ class: inverse
 <center><img src="images/authors_admin_index.png" style="width: 80%" /></center>
 
 ---
-## Resources - fontawesome icons
+## Resources - icons `r icon::fa("r-project")`
 
-<center><img src="images/fontawesome.png" style="width: 90%" /></center>
+- [Fontawesome](https://fontawesome.com/icons?d=gallery) and `"r icon::fa()"`
+
+![](images/icons.png)
+
+---
+## Resources - Emoji `r emo::ji("sunglasses")`
+
+- [Cheat sheet](https://www.webfx.com/tools/emoji-cheat-sheet/) and `"r emo::ji()"`
+
+![](images/emoji.png)
 
 ---
 class: inverse
