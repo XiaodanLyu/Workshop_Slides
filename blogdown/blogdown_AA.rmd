@@ -256,8 +256,6 @@ class: inverse
 ---
 ## Create a new Markdown publication (content/publication)
 
-- use the **New Post** Addin (or run `blogdown::new_post(ext = '.Rmd')`)
-
 <center><img src="images/publication.png" style="width: 90%" /></center>
 
 ---
