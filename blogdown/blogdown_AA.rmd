@@ -263,6 +263,7 @@ class: inverse
 
 <center><img src="images/publication_markdown.png" style="width: 80%" /></center>
 
+---
 ## Add publication citation
 
 - use **bibtex** format. This can be done using BibDesk
