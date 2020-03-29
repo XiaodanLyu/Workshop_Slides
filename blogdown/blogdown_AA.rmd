@@ -267,7 +267,7 @@ class: inverse
 
 - use **bibtex** format. This can be done using BibDesk
 
-<center><img src="images/bibtex.png" style="width: 90%" /></center>
+<center><img src="images/BibDesk.png" style="width: 90%" /></center>
 
 ---
 ## Deploy with Netlify and GitHub
