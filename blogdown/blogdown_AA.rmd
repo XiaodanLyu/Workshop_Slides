@@ -254,5 +254,23 @@ class: inverse
 - Create a "hello world" post
 
 ---
+## Create a new Markdown publication (content/publication)
+
+- use the **New Post** Addin (or run `blogdown::new_post(ext = '.Rmd')`)
+
+<center><img src="images/publication.png" style="width: 90%" /></center>
+
+---
+## Create a new Markdown publication (content/publication)
+
+<center><img src="images/publication_markdown.png" style="width: 80%" /></center>
+
+## Add publication citation
+
+- use **bibtex** format. This can be done using BibDesk
+
+<center><img src="images/bibtex.png" style="width: 90%" /></center>
+
+---
 ## Deploy with Netlify and GitHub
 
