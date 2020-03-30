@@ -93,6 +93,8 @@ background-position: 50% 50%
 1. customize your content by modifying a template website -- <span style="color:blue">lots of work</span> `r emo::ji("sweat_smile")`
 
   + `install.packages("blogdown")`
+  
+  + `blogdown::install_hugo()`
 
 --
 
