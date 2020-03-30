@@ -1,8 +1,8 @@
 ---
-title: "Settle down a personal website"
-subtitle: "with blogdown in R"  
-author: "Annie Lyu & Anabelle Laurent"
-date: '<br>Graphics Group @ ISU <br>`r Sys.Date()`'
+title: "Settle down a Personal Website"
+subtitle: "with <i class='fas fa-heart'></i> and R Blogdown"  
+author: "<span style='color:yellow'>Annie Lyu & Anabelle Laurent</span>"
+date: '<br>Graphics Group Meeting @ ISU <br>2020-04-03'
 output:
   xaringan::moon_reader:
     lib_dir: libs
@@ -28,7 +28,7 @@ options(htmltools.dir.version = FALSE)
 
 - Autobiography `r emo::ji("book")`
 
-  + [我网故我在 - Yihui Xie](https://yihui.org/cn/2016/12/student-project/)
+  + [I web, therefore I am. - Yihui Xie](https://bookdown.org/yihui/blogdown/)
 
 --
 
@@ -106,21 +106,21 @@ background-position: 50% 50%
 
 1. publish with GitHub and Netlify -- <span style="color:blue">somewhat tricky</span> `r emo::ji("persevere")`
 
-  + tell Netlify to auto build your website through your GitHub repo
+  + tell Netlify to continuously build and deploy your website from source
   
   + configure custom domain DNS
 
 ---
 ## RStudio and Website using blogdown
 
-New Project -> New Directory -> Website using blogdown 
+New Project $\rightarrow$ New Directory $\rightarrow$ Website using blogdown 
 
 ![](images/start.png)
 
 ---
 ## RStudio and Website using blogdown
 
-New Project -> New Directory -> Website using blogdown 
+New Project $\rightarrow$ New Directory $\rightarrow$ Website using blogdown 
 
 ![](images/start_annote.png)
 
@@ -177,18 +177,31 @@ class: inverse
 ---
 ## Homepage Layout (content/home) 
 
-- `active = true`: keep section; `active = false`: discard section (line 5)
+- `active = true`: keep section; `active = false`: discard section
 
-- `weight`: section order (small weight shows first, line 6)
+- `weight`
 
-<center><img src="images/activate_truefalse.png" style="width: 90%" /></center>
+  + display order (small weight shows first)
+  
+  + works in the same way for both <span style='color:blue'>homepage widgets</span> and <span style='color:blue'>navigation bar menus</span>
+
+For example, `content/home/accomplishments.md`
+
+```yaml
++++
+# Accomplishments widget.
+widget = "accomplishments"  
+headless = true  # This file represents a page section.
+active = false  # Activate this widget? true/false
+weight = 50  # Order that this section will appear.
+```
 
 ---
 ## Biography (content/authors/admin)
 
-- edit authors/**admin**/_index.md to introduce yourself
+- edit `authors/admin/_index.md` to introduce yourself
 
-- replace authors/admin/avatar.jpg with your profile picture
+- replace `authors/admin/avatar.jpg` with your profile picture
 
 <center><img src="images/authors_admin.png" style="width: 90%" /></center>
 
@@ -200,25 +213,24 @@ class: inverse
 ---
 ## Resources - icons `r icon::fa("r-project")`
 
-- [Fontawesome](https://fontawesome.com/icons?d=gallery) and `"r icon::fa()"`
+- `"<i class="fab fa-r-project"></i>"` versus `"r icon::fa('r-project')"`
+
+- [Fontawesome](https://fontawesome.com/icons?d=gallery)
 
 ![](images/icons.png)
-
----
-## Resources - Emoji `r emo::ji("sunglasses")`
-
-- [Cheat sheet](https://www.webfx.com/tools/emoji-cheat-sheet/) and `"r emo::ji()"`
-
-![](images/emoji.png)
 
 ---
 class: inverse
 
 ## Your turn
 
-- Clean up the sections on the homepage (optional)
-
 - Fill in your information (at least name, organization and role)
+
+Optional
+
+- Activate/deactivate the sections (widgets) on the homepage
+
+- Rearrange the section orders however you like
 
 ---
 ## Create a new R Markdown post (content/post)
@@ -236,11 +248,34 @@ class: inverse
   
   + refresh preview
   
-- In YAML header,
+In YAML header,
 
   + `draft:TRUE` $\Rightarrow$ preview an R markdown post
 
   + `draft:FALSE` $\Rightarrow$ ready to deploy a post
+
+---
+
+## Resources - Code Highlight
+
+---
+## Resources - Emoji `r emo::ji("sunglasses")`
+
+- `":sunglasses:"` versus `"r emo::ji('sunglasses')"`
+
+- [Cheat sheet](https://www.webfx.com/tools/emoji-cheat-sheet/)
+
+![](images/emoji.png)
+
+---
+
+## Resources - Shortcodes
+
+- [Hugo's Build-in Shortcodes](https://gohugo.io/content-management/shortcodes/)
+
+- `{{< youtube CjTLN-FXiFA >}}`
+
+<center><iframe width="680" height="383" src="https://www.youtube.com/embed/CjTLN-FXiFA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 
 ---
 ## Import files (static)
@@ -249,12 +284,75 @@ For image not created from your R Markdown file, you should
  
  + add image to the `static/img` folder
  
- + insert your image using `![my-image](/img/xx.png)`
+ + insert your image using `![alternate-text](img/xx.png)`
 
 --
 
 Any files in the `static` folder can be referred using similar relative path!
- 
+
+--
+
+Follow the following steps to link your resume to the navigation bar:
+
+1. add your resume to the `static/files` folder
+
+1. Specify the URL to your resume in `config/_default/menus.toml`
+
+```yaml
+ [[main]]
+    name = "Resume" # displayed text
+    url = "files/resume.pdf"
+    weight = 70
+```
+
+---
+## About hyperlink
+
+- relative path will have prefix with your domain name (e.g., annielyu.com), e.g.,
+
+  + homepage section (widget): `[text](#posts)`
+  
+  + tags: `[text](tags/rstats)`
+  
+  + categories `[text](categories/r)`
+  
+--
+  
+- DO NOT leave out prefix `https://` when referring to external webpages.
+
+--
+
+- Recommended practice for specifying permanent links of your post in `config.toml`
+
+```yaml
+# Rules to generate permanent links of your pages
+[permalinks]
+    post = "/:year/:month/:day/:slug/"
+```
+
+---
+## Create a new publication (content/publication)
+
+<center><img src="images/publication.png" style="width: 90%" /></center>
+
+---
+## Create a new publication (content/publication)
+
+Per publication folder, you need
+
+  + a Markdown file `index.md`
+  + an optional featured image `featured.png` 
+  + an optinal citation `cite.bib` 
+
+<center><img src="images/publication_markdown.png" style="width: 90%" /></center>
+  
+---
+## Resources - citation
+
+- use **bibtex** format. Open `cite.bib` on **BibDesk**
+
+<center><img src="images/BibDesk.png" style="width: 90%" /></center>
+
 ---
 class: inverse
 
@@ -262,27 +360,58 @@ class: inverse
 
 - Create a "hello world" post
 
----
-## Create a new Markdown publication (content/publication)
+- Preview your post
 
-<center><img src="images/publication.png" style="width: 90%" /></center>
+Optional
 
----
-## Create a new Markdown publication (content/publication)
+- Try inserting 
 
-<center><img src="images/publication_markdown.png" style="width: 90%" /></center>
-
-Per publication folder, you need
-
-  + a markdown file, a picture (.png format), and a citation 
+  + code chunk
   
+  + emoji
+  
+  + icon 
+  
+  + image
+  
+  + hyperlink to internal webpages
+
 ---
-## Add a publication citation
+## Additional Site configurations
 
-- use **bibtex** format. Open cite.bib on **BibDesk**
+- `config/_default/params.toml`
 
-<center><img src="images/BibDesk.png" style="width: 90%" /></center>
+  + your contact information (if you activate `content/home/contact.md`)
+
+  + site name and description $\rightarrow$ `title` and `description`
+
+  + custom domain and Google analytics $\rightarrow$ `baseurl` and `google_analytics`
+
+  + active comments $\rightarrow$ `comments`
+
+- `config.toml`
+
+  + enable emoji $\rightarrow$ `enableEmoji = true`
+
+  + activate Chinese/Japanese/Korean languages $\rightarrow$ `hasCJKLanguage = true`
 
 ---
 ## Deploy with Netlify and GitHub
+
+- Publish your repository to [GitHub](https://github.com/)
+
+  + can be private
+  
+  + can ignore the `public` folder in `.gitignore`
+
+- [Netlify](https://www.netlify.com/) $\rightarrow$ New site from Git
+
+---
+class: middle, center
+
+## Thank you `r icon::fa("heart")`
+
+<center><img src="images/pod.png" style="width: 90%" /></center>
+
+I get out of my pod `r emo::ji("laughing")`
 
