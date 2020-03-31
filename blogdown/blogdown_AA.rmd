@@ -257,12 +257,11 @@ In YAML header,
   + `draft:FALSE` $\Rightarrow$ ready to deploy a post
 
 ---
-
 ## Resources - Code Highlight (config/_default/params.toml)
 
 - [Cheat sheet](https://highlightjs.org/static/demo/)
 
-- activate `highlight = true` and write down your style `highlight_style = " "`
+- activate `highlight = true` and write down your style `highlight_style = "arta"`
 
 ![](images/highlight.png)
 
