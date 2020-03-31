@@ -260,6 +260,14 @@ In YAML header,
 
 ## Resources - Code Highlight
 
+- [Cheat sheet](https://highlightjs.org/static/demo/)
+
+- edit `config/_default/params.toml`
+
+- activate `highlight = true` and write down your style `highlight_style = " "`
+
+<center><img src="images/highlight.png" style="width: 90%" /></center>
+
 ---
 ## Resources - Emoji `r emo::ji("sunglasses")`
 
