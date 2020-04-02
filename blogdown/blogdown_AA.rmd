@@ -2,7 +2,7 @@
 title: "Settle down a Personal Website"
 subtitle: "with <i class='fas fa-heart'></i> and R Blogdown"  
 author: "<span style='color:yellow'>Annie Lyu & Anabelle Laurent</span>"
-date: '<br>Graphics Group Meeting @ ISU <br>2020-04-03'
+date: '<br>Graphics Group Meeting @ISU <br> Workshop @R-Ladies-Ames <br><br>2020-04-03'
 output:
   xaringan::moon_reader:
     lib_dir: libs
@@ -134,7 +134,7 @@ background-position: 50% 50%
 ---
 class: inverse
 
-## Your Turn
+## Your Turn (2min)
 
 - Create a new website using the RStudio dialog to set it up in a new project.
 
@@ -143,7 +143,7 @@ class: inverse
 - Live preview a website locally (Addins -> Serve Site).
 
 ---
-## File structure
+## File structure (VERY IMPORTANT!!!)
 
 - configuration: <span style="color:blue">a few site settings to go through</span>
 
@@ -226,7 +226,7 @@ weight = 50  # Order that this section will appear.
 ---
 class: inverse
 
-## Your turn
+## Your turn (2min)
 
 - Fill in your information (at least name, organization and role)
 
@@ -366,19 +366,11 @@ Per publication folder, you need
   + an optinal citation `cite.bib` 
 
 <center><img src="images/publication_markdown.png" style="width: 90%" /></center>
-  
----
-exclude: true
-## Resources - citation
-
-- use **bibtex** format. Open `cite.bib` on **BibDesk**
-
-<center><img src="images/BibDesk.png" style="width: 90%" /></center>
 
 ---
 class: inverse
 
-## Your Turn
+## Your Turn (2min)
 
 - Create a "hello world" post
 
@@ -436,4 +428,32 @@ class: middle, center
 <center><img src="images/pod.png" style="width: 90%" /></center>
 
 I get out of my pod `r emo::ji("laughing")`
+
+---
+count: false
+class: middle, center, inverse
+
+## Appendix
+
+---
+count: false
+## Resources - citation
+
+- use **bibtex** format. Open `cite.bib` on **BibDesk**
+
+<center><img src="images/BibDesk.png" style="width: 90%" /></center>
+
+---
+count: false
+
+## Public GitHub Repositories of Blogdown Website
+
+- [Yihui Xie](https://github.com/yihui/yihui.org)
+
+- [Alison Hill](https://github.com/rbind/apreshill)
+
+- [Amber Thomas](https://github.com/ProQuestionAsker/websiteSource)
+
+- [Annie Lyu](https://github.com/XiaodanLyu/annielyu.com)
+
 
